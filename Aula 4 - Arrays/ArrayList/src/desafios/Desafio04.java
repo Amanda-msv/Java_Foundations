@@ -24,6 +24,8 @@ public class Desafio04 {
 
         ArrayList<String> frutasFiltradas = new ArrayList<>();
 
+        //palavras.removeIf(palavras -> palavras.toUpperCase().contains(letra));
+
         for (String palavra : palavras) {
             if ( !palavra.contains(letra) ) {
                 frutasFiltradas.add(palavra);

@@ -1,6 +1,7 @@
 package desafios;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Desafio05 {
@@ -29,12 +30,15 @@ public class Desafio05 {
             }  else {
                 impares.add(palavra);
             }
+
         }
+
+        Collections.sort(pares);
+        Collections.sort(impares);
 
         System.out.println("As palavrs são: " + palavras);
         System.out.println("As pares: " + pares);
         System.out.println("As impares: " + impares);
-
 
 
         sc.close();
