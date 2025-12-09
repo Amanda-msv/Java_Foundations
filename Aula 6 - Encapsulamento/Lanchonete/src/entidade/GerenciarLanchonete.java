@@ -23,7 +23,6 @@ public class GerenciarLanchonete {
     public void atualizarLanche(String nomeLanche,  double valorLanche, int quantidade) {
         var lanche = listaLanches.get(quantidade);
         lanche.setNomeLanche(nomeLanche);
-        lanche.setQuantidade(quantidade);
         lanche.setValorUnitario(valorLanche);
         System.out.println("\nLanche atualizado com sucesso!");
 
@@ -34,6 +33,15 @@ public class GerenciarLanchonete {
         System.out.println("Lanche removido com sucesso!");
     }
 
+    public double valorTotal() {
+        double soma = 0;
+        for (Lanches l : listaLanches) {
+            soma += l.getValorUnitario();
+        }
+        return soma;
+
+        public void soma valor t
+    }
 
 
 }
