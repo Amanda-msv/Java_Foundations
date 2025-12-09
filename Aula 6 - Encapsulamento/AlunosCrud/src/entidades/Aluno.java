@@ -1,9 +1,10 @@
-package entidade;
+package entidades;
 
 public class Aluno {
     private String nome;
     private double nota;
     private double nota2;
+    private String escola;
 
     public Aluno(String nome, double nota, double nota2) {
         this.nome = nome;
@@ -35,15 +36,13 @@ public class Aluno {
         this.nota2 = nota2;
     }
 
-
-    public double calcularMedia(){
-        return (this.nota + this.nota2) /2;
+    public double calcularMedia() {
+        return (this.nota + this.nota2) / 2;
     }
 
     @Override
     public String toString() {
-        return this.nome + " | " + this.nota +
-                " | " + this.nota2 + " | " + this.calcularMedia();
-
+        return " | " + this.nome + " | " + this.nota
+                + " | " + this.nota2 + " | " +  this.calcularMedia() + " | ";
     }
 }
