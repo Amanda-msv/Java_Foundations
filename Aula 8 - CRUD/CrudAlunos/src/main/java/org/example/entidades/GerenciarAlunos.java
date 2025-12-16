@@ -86,7 +86,8 @@ public class GerenciarAlunos {
                         rs.getString("nome") + " | " +
                         rs.getDouble("nota") + " | " +
                         rs.getDouble("nota2") + " | " +
-                        calcularMedia(rs.getDouble("nota"), rs.getDouble("nota2");
+                        calcularMedia(rs.getDouble("nota"), rs.getDouble("nota2"))
+                );
 
             }
 
