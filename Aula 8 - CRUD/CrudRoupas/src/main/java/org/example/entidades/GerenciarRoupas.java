@@ -41,5 +41,40 @@ public class GerenciarRoupas {
 
     }
 
+    public void excluirRoupas (int id){
+        String sql = "DELETE FROM roupas WHERE id = ?";
+
+        try {
+            Connection conexao = conectar();
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.executeUpdate();
+            System.out.println("Roupa excluida com sucesso!");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    public void alterarRoupas (int id, String marca, String tipo, int quantidade, double valor){
+        String sql = "UPDATE roupas" + "SET marca = ?, tipo = ?, quantidade = ?, valor = ? WHERE id = ?";
+
+
+        try {
+            Connection conexao = conectar();
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, marca);
+            stmt.setString(2, tipo);
+            stmt.setInt(3, quantidade);
+            stmt.setDouble(4, valor);
+            stmt.setInt(5, id);
+
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 
 }

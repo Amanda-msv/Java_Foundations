@@ -11,7 +11,14 @@ public class Main {
         Roupa roupa = new Roupa("Zara", "Camiseta","M",
                 20,200.85);
 
+        //Chamada do metodo cadastrar
         gerenciarRoupas.cadastrarRoupas(roupa);
+
+        //Chamada do metodo excluir
+        gerenciarRoupas.excluirRoupas(1);
+
+        gerenciarRoupas.alterarRoupas(3,"Renner", "Camiseta", 10, 180.00);
+
 
     }
 }
