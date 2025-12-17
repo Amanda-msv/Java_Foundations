@@ -1,7 +1,6 @@
 package com.example.lojaroupa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +17,10 @@ import lombok.Setter;
 @NoArgsConstructor
 
 public class Roupa {
-    
+
+
+    @Id //Informe que o id é a chave primaria
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Informa que o banco gera o valor do id
     private int id;
     private String marca;
     private String tamanho;
