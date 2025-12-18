@@ -9,7 +9,7 @@ public class Desafio_3 {
         //(inclusive). O jogador terá uma tentativa para adivinhar o número. O programa deverá exibir mensagens indicando se o jogador
         //acertou ou errou.
 
-        int maquina = (int) (Math.random() * 10);
+        int maquina = (int) (Math.random() * 11);
         System.out.println("Digite um número de 0 ate 10: ");
         int usuario = sc.nextInt();
 
